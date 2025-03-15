@@ -19,11 +19,6 @@
         <a href="{{ url('/about') }}" class="nav-button {{ request()->is('about') ? 'active' : '' }}">About Us</a>
     </nav>
     </header>
-
-    <header class="div-header">
-    <div class="heading">{{$heading}}</div>
-        </header>
-
     <main>
         <div class="main">
             {{$slot}}

@@ -2,18 +2,20 @@
     margin: 0 auto;
 }
 .header {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     background-color: #FFFAEE;
-
+    box-shadow: 0px 1px 10px #FFFAEE;
+    z-index: 10;
 }
 
 
+
 #logo {
-    height: 100px;
-    margin-left: 20px;
+    height: 70px;
+    margin-left: 80px;
 }
 
 
@@ -23,8 +25,8 @@
 }
 
 .nav-button {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
     color: black;
     text-decoration: none;
     padding: 10px 20px;
@@ -39,21 +41,62 @@
 }
 
 
-.div-header{
-    padding: 2vw;
-    box-shadow: 0px 5px 10px rgb(26, 26, 26, 0.5);
+/* HOME CSS */
+
+.image-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(22, 22, 22);
+    filter: brightness(50%);
+    background: url('your-image.jpg') no-repeat center center/cover; /* Make sure to replace with your actual image */
+}
+
+  .centered-home{
+    position: absolute;
+    top: 40%;
+    transform: translate(40%);
+    color: #FFFAEE;
+    font-size: 3vw;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  p{
+    font-size: 1vw;
+    text-align: center;
+    font-style: italic;
+    padding: .5vw;
+  }
+
+  .centered-button {
+    position: absolute;
+    left: 50%;
+    transform: translate( -50%);
+    color: #ffffff;
+    background-color: #ffb74a;
+    padding: 1vw;
+    font-size: 2vw;
+    border-radius: 1vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
 
-
-
-
 @media (max-width: 768px) {
+
+    .logo{
+        width: 10vw;
+    }
     .header {
         flex-direction: column;
         align-items: center;
         padding: 10px;
+        background-color: #FFFAEE;
+        box-shadow: 0px 1px 10px #FFFAEE;
+        z-index: 10;
     }
 
     #logo {
@@ -61,23 +104,61 @@
     }
 
     .button-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 15px;
     }
 
     .nav-button {
         display: block;
-        width: 100%;
+        font-size: 2vw;
         text-align: center;
         padding: 12px;
+        border-radius: 1vw;
     }
 }
 
+    .centered-home{
+        top: 35%;
+        font-size: 3vw;
+    }
+
+    .centered-button{
+        top: 75%;
+        font-size: 2vw;
+        padding: 1.5vw;
+        border-radius: 1vw;
+    }
+
+
 @media (max-width: 480px) {
+
+    .logo{
+        width: 10vw;
+    }
+
+
+
     .nav-button {
-        font-size: 16px;
-        padding: 12px;
-        width: 90%;
+        font-size: 3vw;
+        padding: 2vw;
+        border-radius: 1vw;
+    }
+
+    .centered-home{
+        top: 25%;
+        transform: translate(5%);
+        font-size: 5vw;
+    }
+
+    .centered-home p{
+        font-size: 2vw;
+    }
+
+    .centered-button{
+        top: 75%;
+        font-size: 3vw;
+        padding: 2vw;
+        border-radius: 1vw;
     }
 }

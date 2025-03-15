@@ -9,23 +9,23 @@
 </head>
 <body>
     <header class="header">
-
     <img src="images/LOGO.png" id="logo" alt="cuptainsbrewlogo">
 
-    <nav class="button-container">
+    <!-- "nav-menu" is for mobile-->
+    <button id="menu-toggle" class="hamburger-menu"> ☰  </button>
+
+    <nav class="button-container" id="nav-menu">
         <a href="{{ url('/') }}" class="nav-button {{ request()->is('/') ? 'active' : '' }}">Home</a>
         <a href="{{ url('/menu') }}" class="nav-button {{ request()->is('menu') ? 'active' : '' }}">Menu</a>
         <a href="{{ url('/career') }}" class="nav-button {{ request()->is('career') ? 'active' : '' }}">Career</a>
         <a href="{{ url('/about') }}" class="nav-button {{ request()->is('about') ? 'active' : '' }}">About Us</a>
     </nav>
     </header>
-    <main>
-        <div class="main">
-            {{$slot}}
 
-        </div>
+    <div >
+        {{$slot}}
+     </div>
 
 
-    </main>
 </body>
 </html>

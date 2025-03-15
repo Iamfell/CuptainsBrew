@@ -1,27 +1,37 @@
 *{
-    margin: 0 auto;
+    margin: 0 ;
 }
+
+.body {
+
+    margin: 0;
+    padding: 0;
+}
+
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
     display: flex;
     align-items: center;
     padding: 10px;
     background-color: #FFFAEE;
     box-shadow: 0px 1px 10px #FFFAEE;
     z-index: 10;
+
 }
 
-
-
 #logo {
-    height: 70px;
-    margin-left: 80px;
+    width: 15vw;
+    margin-right: 10vw;
+    margin-left: 5vw;
 }
 
 
 .button-container {
     display: flex;
-    gap: 40px;
+    gap: 5vw;
+    margin-left: 1.5vw;
 }
 
 .nav-button {
@@ -41,40 +51,40 @@
 }
 
 
-/* HOME CSS */
+/* START HOME CSS */
 
-.image-container {
+.image-container #getstarted{
     position: relative;
     width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: rgb(22, 22, 22);
-    filter: brightness(50%);
-    background: url('your-image.jpg') no-repeat center center/cover; /* Make sure to replace with your actual image */
-}
+    filter: brightness(40%);
+    }
 
   .centered-home{
-    position: absolute;
-    top: 40%;
-    transform: translate(40%);
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    bottom: 40vw;
     color: #FFFAEE;
-    font-size: 3vw;
+    font-size: 1vw;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  p{
+  .centered-home p{
     font-size: 1vw;
     text-align: center;
     font-style: italic;
     padding: .5vw;
+    padding-bottom: 2vw;
   }
 
   .centered-button {
-    position: absolute;
-    left: 50%;
-    transform: translate( -50%);
+    position: relative;
+    justify-content: center;
+    top: 10vw;
     color: #ffffff;
     background-color: #ffb74a;
     padding: 1vw;
@@ -83,13 +93,60 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+ #gsmenu{
+    position: relative;
+    width: 100%;
+    display: flex;
+    bottom: 10vw;
+    justify-content: center;
+    color: rgb(22, 22, 22);
+    filter: brightness(40%);
+}
+
+.centered-menu{
+    position: relative;
+    bottom: 25vw;
+    text-align: center;
+    color: #FFFAEE;
+    font-size: 3vw;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.centered-menu p{
+    font-size: 1vw;
+    text-align: center;
+    font-style: italic;
+    padding: .5vw;
+
+}
 
 
-@media (max-width: 768px) {
+/* END HOME CSS */
 
-    .logo{
-        width: 10vw;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and CSS */
+
+
+
+@media screen and (max-width: 768px) {
+
+    #logo {
+        width: 25vw;
+        margin-left: 80px;
     }
+
     .header {
         flex-direction: column;
         align-items: center;
@@ -104,9 +161,10 @@
     }
 
     .button-container {
+        margin: auto;
         flex-direction: row;
         align-items: center;
-        gap: 15px;
+        gap: 5vw;
     }
 
     .nav-button {
@@ -131,12 +189,18 @@
     }
 
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
-    .logo{
-        width: 10vw;
+
+
+
+    #logo {
+        width: 40vw;
+
     }
-
+    .image-container, #getstarted{
+        width: 100vw;
+    }
 
 
     .nav-button {
@@ -147,7 +211,6 @@
 
     .centered-home{
         top: 25%;
-        transform: translate(5%);
         font-size: 5vw;
     }
 
@@ -161,4 +224,6 @@
         padding: 2vw;
         border-radius: 1vw;
     }
+
+
 }

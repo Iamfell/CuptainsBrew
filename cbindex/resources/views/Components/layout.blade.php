@@ -11,8 +11,8 @@
     <header class="header">
     <img src="images/LOGO.png" id="logo" alt="cuptainsbrewlogo">
 
-    <!-- "nav-menu" is for mobile-->
-    <button id="menu-toggle" class="hamburger-menu"> ☰  </button>
+    <!-- "nav-menu" is for mobile
+    <button id="menu-toggle" class="hamburger-menu"> ☰  </button> -->
 
     <nav class="button-container" id="nav-menu">
         <a href="{{ url('/') }}" class="nav-button {{ request()->is('/') ? 'active' : '' }}">Home</a>
@@ -22,9 +22,9 @@
     </nav>
     </header>
 
-    <div >
-        {{$slot}}
-     </div>
+     <body>
+        @yield('content')
+    </body>
 
 
 </body>

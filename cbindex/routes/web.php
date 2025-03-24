@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('home');
@@ -23,34 +25,17 @@ route::get('/about', function(){
 
 
 
+// LOGIN ROUTES
+Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
+Route::post('/login', [LoginController::class, 'login']); // <<< THIS LINE enables POST method!
+// REGISTER ROUTES
+Route::get('/register', [RegisterController::class, 'showRegister'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
 
-Route::get('/home', function () {
+
+
+
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+Route::get('/home', function() {
     return view('home');
 })->name('home');
-
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
-
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
-
-Route::post('/register', [AuthController::class, 'register'])->name('register.submit');
-
-Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
-
-
-// LOGIN ROUTES
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login']); // <<< THIS LINE enables POST method!
-// REGISTER ROUTES
-Route::get('/register', [AuthController::class, 'showRegister']);
-Route::post('/register', [AuthController::class, 'register']);
-
-
-
-Route::post('/login', [AuthController::class, 'loginSubmit'])->name('login.submit');
-Route::get('/home', function() {
-    return view('home'); // Blade home page
-});

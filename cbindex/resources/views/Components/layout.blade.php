@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header class="header">
     <img src="images/LOGO.png" id="logo" alt="cuptainsbrewlogo">
 

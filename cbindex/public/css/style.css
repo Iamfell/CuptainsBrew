@@ -54,7 +54,7 @@ body {
 /* START HOME CSS */
 
 
-.image-container #getstarted, #login-overlay{
+ .image-container #getstarted, #login-overlay{
     position: relative;
     width: 100%;
     justify-content: center;
@@ -64,23 +64,14 @@ body {
     filter: brightness(40%);
     }
 
-    #login-overlay{
-        position: relative;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: rgb(22, 22, 22);
-        filter: brightness(40%);
-        }
-
   .centered-home{
     position: relative;
     text-align: center;
     justify-content: center;
     bottom: 40vw;
     color: #FFFAEE;
-    font-size: 1vw;
+    top: 35%;
+        font-size: 3vw;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
@@ -103,6 +94,11 @@ body {
     border-radius: 1vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+    .centered-button:hover{
+    background-color: #28221d;
+    color: #FFFAEE;
+    transition: .2s;
+    }
 
  #gsmenu{
     position: relative;
@@ -223,7 +219,7 @@ body {
 
 .login-container button, .register-container button {
   width: 100%;
-  background-color: #d4b49c;
+  background-color: #ffb74a;
   color: white;
   padding: 10px;
   border: none;
@@ -252,11 +248,14 @@ body {
 
 .create-account,
 .register-account {
+    background-color: #ffb74a;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: 500;
     font-size: 1.5vw;
     margin-top: 10px;
+    padding: 1.5vw;
+    border-radius: 1vw;
 }
 
 
@@ -312,17 +311,13 @@ body {
     }
 
     .centered-button{
-        top: 75%;
+        top: 1vw;
         font-size: 2vw;
         text-decoration: none;
-        padding: 1.5vw;
+        padding: 1vw;
         border-radius: 1vw;
     }
 
-    .centered-button:hover{
-        background-color: #28221d;
-        color: #ffb74a;
-    }
 
 @media screen and (max-width: 480px) {
 
@@ -351,7 +346,7 @@ body {
     }
 
     .centered-button{
-        top: 75%;
+        top: 70%;
         font-size: 3vw;
         padding: 2vw;
         border-radius: 1vw;

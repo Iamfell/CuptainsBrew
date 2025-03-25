@@ -32,6 +32,7 @@ body {
     display: flex;
     gap: 5vw;
     margin-left: 1.5vw;
+    transition: .4s;
 }
 
 .nav-button {
@@ -130,6 +131,11 @@ body {
 
 /* END HOME CSS */
 
+
+
+
+
+
 /* LOGIN PAGE */
 
 
@@ -146,16 +152,14 @@ body {
 
 }
 
-.login-container, .register-container {
+.login-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #FFFAEE;
-    padding: 10px;
+    background-color: #28221d;
+
 
 }
 
@@ -230,6 +234,7 @@ body {
 .register-container button:hover {
   background-color: #c49a87;
 }
+
 .login-container a,
 .register-container a {
   text-decoration: none;
@@ -266,7 +271,8 @@ body {
 
 
 
-/* @media screen and CSS */
+
+/* START ------------------------------  @media screen and CSS */
 
 
 @media screen and (max-width: 768px) {
@@ -289,11 +295,9 @@ body {
         margin: 0 auto;
     }
 
-    .button-container {
-        margin: auto;
-        flex-direction: row;
-        align-items: center;
-        gap: 5vw;
+    #nav-menu.button-container {
+      flex-direction: row;
+      transition: .4s;
     }
 
     .nav-button {
@@ -317,6 +321,7 @@ body {
         padding: 1vw;
         border-radius: 1vw;
     }
+
 
 
 @media screen and (max-width: 480px) {
@@ -350,6 +355,12 @@ body {
         font-size: 3vw;
         padding: 2vw;
         border-radius: 1vw;
+    }
+
+
+
+    #nav-menu.button-container{
+        display: none;
     }
 
 }

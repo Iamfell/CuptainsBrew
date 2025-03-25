@@ -8,7 +8,7 @@
     <h2>LOGIN</h2>
 
     @if ($errors->any())
-        <div style="background-color:#f44336; color:white; padding:10px; margin-bottom:10px;">
+        <div style="background-color: #f44336; color:white; padding:10px; margin-bottom:10px;">
             {{ $errors->first() }}
         </div>
     @endif
